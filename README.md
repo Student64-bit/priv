@@ -20,12 +20,19 @@ For this step, I started by creating a basic HTML webpage to be displayed. Then,
 <p align="center">
   <img src="Images/jen1.png" alt="error" width="80%" height="80%">
   <br>
-  <strong><small>The three EC2 Instances that will be used in my CI/CD pipeline.</small></strong>
+  <strong><small>The three EC2 instances that will be used in my CI/CD pipeline.</small></strong>
 </p> 
 
 ### Step 2: Setting Up Jenkins
 
 Next, I shelled into my Jenkins instance and installed a Java JRE. This allowed me to install Jenkins on the instance. After installing Jenkins, I went into my EC2 instance's security group and opened port 8080 so that I could configure Jenkins settings via the internet using my instance's IP. I then used the `systemctl status jenkins` command to get my secret key, which I needed to set up Jenkins properly. Inside the Jenkins configuration, I provided my GitHub link along with the correct branch and selected ‘GitHub hook trigger for GITScm polling’ to enable continuous integration whenever changes are made to GitHub.
+
+<p align="center">
+  <img src="Images/jen2.png" alt="error" width="80%" height="80%">
+  <br>
+  <strong><small>Exposing port 8080 so that I can use the jenkins dashboard when its setup in my EC2 instance.</small></strong>
+</p> 
+
 
 ### Step 3: Testing the Jenkins Pipeline
 
@@ -44,3 +51,4 @@ In my third and final instance, the task was to set up Docker so that Jenkins on
 - **Jenkins Performance**: The Jenkins dashboard was incredibly slow, so I upgraded the AWS EC2 instance to a larger size with higher compute power.
 - **SonarQube Integration**: The Java community JDK used was outdated. Console logs from Jenkins helped identify this issue, which was resolved by creating a new Java 17 JDK run path file.
 - **Lost Jenkins Password**: Lost the Jenkins user password stored in a text file. Resolved by editing the XML file in the Jenkins instance, setting `<security>false</security>`, accessing the dashboard without login credentials, and resetting the password. Improved future password management practices to avoid such issues.
+
