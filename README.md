@@ -76,7 +76,7 @@ To test the Jenkins pipeline I previously created, I set up a webhook for my Git
 <p align="center">
   <img src="Images/jen10.png" alt="error" width="80%" height="80%">
   <br>
-  <strong><small>Project Image: Test file that im going to commit to my github repository to test that jenkins is contiously integrating changes I have committed (Filename 'Jenkins test'.</small></strong>
+  <strong><small>Project Image: Test file that im going to commit to my github repository to test that jenkins is contiously integrating changes I have committed (Filename 'Jenkins test').</small></strong>
 </p> 
 
 <p align="center">
@@ -92,10 +92,59 @@ To test the Jenkins pipeline I previously created, I set up a webhook for my Git
 </p> 
 
 
-
 ### Step 4: Setting Up SonarQube
 
 For this step, I configured and set up SonarQube on my second EC2 instance for continuous code analysis. This involved installing all the necessary components, including SonarQube, and exposing port 9000 so I could use the web GUI with the instance IP. From there, I set up and generated a token to use in Jenkins. After the configuration, I built my pipeline and checked on the SonarQube website to see if my code passed the test, which it did. This meant I could now deploy the passed code to Docker, tying up my project where I can commit code, and if it passes, it will be continuously deployed to Docker.
+
+<p align="center">
+  <img src="Images/jen13.png" alt="error" width="80%" height="80%">
+  <br>
+  <strong><small>Project Image: Used 'wget' command to install sonarqube on my instance and used the unzip command to recieve its contents.</small></strong>
+</p> 
+
+<p align="center">
+  <img src="Images/jen14.png" alt="error" width="80%" height="80%">
+  <br>
+  <strong><small>Project Image: Sonarqube is up and running.</small></strong>
+</p> 
+
+<p align="center">
+  <img src="Images/jen15.png" alt="error" width="80%" height="80%">
+  <br>
+  <strong><small>Project Image: Generating a sonarqube token so that sonarqube can be implemented into my jenkins pipeline.</small></strong>
+</p> 
+
+<p align="center">
+  <img src="Images/jen16.png" alt="error" width="80%" height="80%">
+  <img src="Images/jen17.png" alt="error" width="80%" height="80%">
+  <br>
+  <strong><small>Project Image: Installing appriate jenkins plugins to use with sonarqube.</small></strong>
+</p> 
+
+<p align="center">
+  <img src="Images/jen18.png" alt="error" width="80%" height="80%">
+  <br>
+  <strong><small>Project Image: Configuring the sonarqube scanner on jenkins.</small></strong>
+</p> 
+
+<p align="center">
+  <img src="Images/jen19.png" alt="error" width="80%" height="80%">
+  <br>
+  <strong><small>Project Image: Configuring the sonarqube server on jenkins.</small></strong>
+</p> 
+
+<p align="center">
+  <img src="Images/jen21.png" alt="error" width="80%" height="80%">
+  <br>
+  <strong><small>Project Image: Configuring the sonarqube token.</small></strong>
+</p> 
+
+<p align="center">
+  <img src="Images/jen25.png" alt="error" width="80%" height="80%">
+  <br>
+  <strong><small>Project Image: Finally after configuring sonarqube to work with jenkins, I rebuilt my pipeline and sonarqube is successfully scanning and checking for code errors contiously/automatically whenever a commit is made ot my github repository.</small></strong>
+</p> 
+
 
 ### Step 5: Configuring Docker
 
@@ -104,6 +153,21 @@ In my third and final instance, the task was to set up Docker so that Jenkins on
 ## Issues Encountered
 
 - **Jenkins Performance**: The Jenkins dashboard was incredibly slow, so I upgraded the AWS EC2 instance to a larger size with higher compute power.
+
+<p align="center">
+  <img src="Images/jen24.png" alt="error" width="80%" height="80%">
+  <br>
+  <strong><small>Project Image: Upgrading my instances from t2.micro to t2.medium for more memeory and computing power</small></strong>
+</p> 
+  
 - **SonarQube Integration**: The Java community JDK used was outdated. Console logs from Jenkins helped identify this issue, which was resolved by creating a new Java 17 JDK run path file.
+
+<p align="center">
+  <img src="Images/jen22.png" alt="error" width="80%" height="80%">
+  <img src="Images/jen23.png" alt="error" width="80%" height="80%">
+  <br>
+  <strong><small>Project Image: Implementing the new java 17 sdk path for jenkins, since the older updated path was giving me errors.</small></strong>
+</p> 
+  
 - **Lost Jenkins Password**: Lost the Jenkins user password stored in a text file. Resolved by editing the XML file in the Jenkins instance, setting `<security>false</security>`, accessing the dashboard without login credentials, and resetting the password. Improved future password management practices to avoid such issues.
 
