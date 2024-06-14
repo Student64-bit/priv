@@ -151,7 +151,7 @@ For this step, I configured and set up SonarQube on my second EC2 instance for c
 In my third and final instance, the task was to set up Docker so that Jenkins on my first instance could connect to the Docker server to implement continuous deployment for my simple HTML resume website when I commit changes to GitHub. To test that things were working, I ran remote executable commands from Jenkins. I did ‘touch test.txt’ from Jenkins to make sure when I built and updated my pipeline, the test.txt file would appear inside my Docker instance, which it did. Then, I created a Dockerfile on GitHub and ran commands to ensure that when I committed changes to GitHub, they were reflected on the Docker instance. As shown below, my resume website has been deployed and set up for continuous integration, analysis (with SonarQube), and deployment with Docker.
 
 <p align="center">
-  <img src="Images/jen21.png" alt="error" width="80%" height="80%">
+  <img src="Images/jen26.png" alt="error" width="80%" height="80%">
   <br>
   <strong><small>Project Image: Installing & setting up docker on my instance</small></strong>
 </p> 
