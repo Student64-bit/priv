@@ -36,7 +36,7 @@ Next, I shelled into my Jenkins instance and installed a Java JRE. This allowed 
 <p align="center">
   <img src="Images/jen3.png" alt="error" width="80%" height="80%">
   <br>
-  <strong><small>Project Image:Jenkins is up and running on the instance. Although I will clean up after this project and the IP address will no longer be in use, it's generally a good practice to avoid exposing or displaying IP addresses. This caution helps protect against potential bad actors, even if the instance is virtual..</small></strong>
+  <strong><small>Project Image: Jenkins is up and running on the instance. Although I will clean up after this project and the IP address will no longer be in use, it's generally a good practice to avoid exposing or displaying IP addresses. This caution helps protect against potential bad actors, even if the instance is virtual..</small></strong>
 </p> 
 
 <p align="center">
@@ -45,11 +45,53 @@ Next, I shelled into my Jenkins instance and installed a Java JRE. This allowed 
   <strong><small>Project Image: Installing default plugins via the jenkins dashboard.</small></strong>
 </p> 
 
-
-
 ### Step 3: Testing the Jenkins Pipeline
 
 To test the Jenkins pipeline I previously created, I set up a webhook for my GitHub repository. To check if everything was working, I created a new text file in my GitHub repository called ‘Jenkins Test’. Once I committed and pushed the file, I checked Jenkins to see if it triggered the pipeline, which it did. This confirmed that the pipeline up to this point was functioning automatically.
+
+<p align="center">
+  <img src="Images/jen5.png" alt="error" width="80%" height="80%">
+  <br>
+  <strong><small>Project Image: Setting up my webhook to invoke jenkins whenever code is committed to my github repository.</small></strong>
+</p> 
+
+<p align="center">
+  <img src="Images/jen7.png" alt="error" width="80%" height="80%">
+  <br>
+  <strong><small>Project Image: Initial jenkins build, so that I can test continuous integration.</small></strong>
+</p> 
+
+<p align="center">
+  <img src="Images/jen9.png" alt="error" width="80%" height="80%">
+  <br>
+  <strong><small>Project Image: Console output</small></strong>
+</p> 
+
+<p align="center">
+  <img src="Images/jen8.png" alt="error" width="80%" height="80%">
+  <br>
+  <strong><small>Project Image: Pipeline before the test commit to github.</small></strong>
+</p> 
+
+<p align="center">
+  <img src="Images/jen10.png" alt="error" width="80%" height="80%">
+  <br>
+  <strong><small>Project Image: Test file that im going to commit to my github repository to test that jenkins is contiously integrating changes I have committed (Filename 'Jenkins test'.</small></strong>
+</p> 
+
+<p align="center">
+  <img src="Images/jen11.png" alt="error" width="80%" height="80%">
+  <br>
+  <strong><small>Project Image: Build after the commit.</small></strong>
+</p> 
+
+<p align="center">
+  <img src="Images/jen12.png" alt="error" width="80%" height="80%">
+  <br>
+  <strong><small>Project Image: Success, jenkins inegrated the commit from jenkins into the pipeline which is proof of continious integration.</small></strong>
+</p> 
+
+
 
 ### Step 4: Setting Up SonarQube
 
