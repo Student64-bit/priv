@@ -18,10 +18,10 @@ This project demonstrates creating a Continuous Integration and Continuous Deplo
 For this step, I started by creating a basic HTML webpage to be displayed. Then, I set up three separate EC2 instances: one for Jenkins to handle continuous integration, another for SonarQube to check and analyze the code, and the last one for Docker deployment.
 
 <p align="center">
-  <img src="https://i.imgur.com/WnnBdnl.png" alt="Architecture Diagram" width="80%" height="80%">
+  <img src="images/jen1.png" alt="error" width="80%" height="80%">
   <br>
   <strong><small>Figure 1: Simple Architecture Diagram.</small></strong>
-</p>
+</p> 
 
 ### Step 2: Setting Up Jenkins
 
