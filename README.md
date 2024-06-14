@@ -30,19 +30,19 @@ Next, I shelled into my Jenkins instance and installed a Java JRE. This allowed 
 <p align="center">
   <img src="Images/jen2.png" alt="error" width="80%" height="80%">
   <br>
-  <strong><small>Project Image: Exposing port 8080 so that I can use the jenkins dashboard when its setup in my EC2 instance.</small></strong>
+  <strong><small>Project Image: Exposing port 8080 so that I can use the Jenkins dashboard when it’s set up in my EC2 instance.</small></strong>
 </p> 
 
 <p align="center">
   <img src="Images/jen3.png" alt="error" width="80%" height="80%">
   <br>
-  <strong><small>Project Image: Jenkins is up and running on the instance. Although I will clean up after this project and the IP address will no longer be in use, it's generally a good practice to avoid exposing or displaying IP addresses. This caution helps protect against potential bad actors, even if the instance is virtual..</small></strong>
+  <strong><small>Project Image: Jenkins is up and running on the instance. Although I will clean up after this project and the IP address will no longer be in use, it's generally a good practice to avoid exposing or displaying IP addresses. This caution helps protect against potential bad actors, even if the instance is virtual.</small></strong>
 </p> 
 
 <p align="center">
   <img src="Images/jen4.png" alt="error" width="80%" height="80%">
   <br>
-  <strong><small>Project Image: Installing default plugins via the jenkins dashboard.</small></strong>
+  <strong><small>Project Image: Installing default plugins via the Jenkins dashboard.</small></strong>
 </p> 
 
 ### Step 3: Testing the Jenkins Pipeline
@@ -52,13 +52,13 @@ To test the Jenkins pipeline I previously created, I set up a webhook for my Git
 <p align="center">
   <img src="Images/jen5.png" alt="error" width="80%" height="80%">
   <br>
-  <strong><small>Project Image: Setting up my webhook to invoke jenkins whenever code is committed to my github repository.</small></strong>
+  <strong><small>Project Image: Setting up my webhook to invoke Jenkins whenever code is committed to my GitHub repository.</small></strong>
 </p> 
 
 <p align="center">
   <img src="Images/jen7.png" alt="error" width="80%" height="80%">
   <br>
-  <strong><small>Project Image: Initial jenkins build, so that I can test continuous integration.</small></strong>
+  <strong><small>Project Image: Initial Jenkins build, so that I can test continuous integration.</small></strong>
 </p> 
 
 <p align="center">
@@ -70,13 +70,13 @@ To test the Jenkins pipeline I previously created, I set up a webhook for my Git
 <p align="center">
   <img src="Images/jen8.png" alt="error" width="80%" height="80%">
   <br>
-  <strong><small>Project Image: Pipeline before the test commit to github.</small></strong>
+  <strong><small>Project Image: Pipeline before the test commit to GitHub.</small></strong>
 </p> 
 
 <p align="center">
   <img src="Images/jen10.png" alt="error" width="80%" height="80%">
   <br>
-  <strong><small>Project Image: Test file that im going to commit to my github repository to test that jenkins is contiously integrating changes I have committed (Filename 'Jenkins test').</small></strong>
+  <strong><small>Project Image: Test file that I’m going to commit to my GitHub repository to test that Jenkins is continuously integrating changes I have committed (Filename 'Jenkins test').</small></strong>
 </p> 
 
 <p align="center">
@@ -88,7 +88,7 @@ To test the Jenkins pipeline I previously created, I set up a webhook for my Git
 <p align="center">
   <img src="Images/jen12.png" alt="error" width="80%" height="80%">
   <br>
-  <strong><small>Project Image: Success, jenkins inegrated the commit from jenkins into the pipeline which is proof of continious integration.</small></strong>
+  <strong><small>Project Image: Success, Jenkins integrated the commit from Jenkins into the pipeline which is proof of continuous integration.</small></strong>
 </p> 
 
 
@@ -99,91 +99,93 @@ For this step, I configured and set up SonarQube on my second EC2 instance for c
 <p align="center">
   <img src="Images/jen13.png" alt="error" width="80%" height="80%">
   <br>
-  <strong><small>Project Image: Used 'wget' command to install sonarqube on my instance and used the unzip command to recieve its contents.</small></strong>
+  <strong><small>Project Image: Used 'wget' command to install SonarQube on my instance and used the unzip command to retrieve its contents.</small></strong>
 </p> 
 
 <p align="center">
   <img src="Images/jen14.png" alt="error" width="80%" height="80%">
   <br>
-  <strong><small>Project Image: Sonarqube is up and running.</small></strong>
+  <strong><small>Project Image: SonarQube is up and running.</small></strong>
 </p> 
 
 <p align="center">
   <img src="Images/jen15.png" alt="error" width="80%" height="80%">
   <br>
-  <strong><small>Project Image: Generating a sonarqube token so that sonarqube can be implemented into my jenkins pipeline.</small></strong>
+  <strong><small>Project Image: Generating a SonarQube token so that SonarQube can be implemented into my Jenkins pipeline.</small></strong>
 </p> 
 
 <p align="center">
   <img src="Images/jen16.png" alt="error" width="80%" height="80%">
   <img src="Images/jen17.png" alt="error" width="80%" height="80%">
   <br>
-  <strong><small>Project Image: Installing appriate jenkins plugins to use with sonarqube.</small></strong>
+  <strong><small>Project Image: Installing appropriate Jenkins plugins to use with SonarQube.</small></strong>
 </p> 
 
 <p align="center">
   <img src="Images/jen18.png" alt="error" width="80%" height="80%">
   <br>
-  <strong><small>Project Image: Configuring the sonarqube scanner on jenkins.</small></strong>
+  <strong><small>Project Image: Configuring the SonarQube scanner on Jenkins.</small></strong>
 </p> 
 
 <p align="center">
   <img src="Images/jen19.png" alt="error" width="80%" height="80%">
   <br>
-  <strong><small>Project Image: Configuring the sonarqube server on jenkins.</small></strong>
+  <strong><small>Project Image: Configuring the SonarQube server on Jenkins.</small></strong>
 </p> 
 
 <p align="center">
   <img src="Images/jen21.png" alt="error" width="80%" height="80%">
   <br>
-  <strong><small>Project Image: Configuring the sonarqube token.</small></strong>
+  <strong><small>Project Image: Configuring the SonarQube token.</small></strong>
 </p> 
 
 <p align="center">
   <img src="Images/jen25.png" alt="error" width="80%" height="80%">
   <br>
-  <strong><small>Project Image: Finally after configuring sonarqube to work with jenkins, I rebuilt my pipeline and sonarqube is successfully scanning and checking for code errors contiously/automatically whenever a commit is made ot my github repository.</small></strong>
+  <strong><small>Project Image: Finally, after configuring SonarQube to work with Jenkins, I rebuilt my pipeline and SonarQube is successfully scanning and checking for code errors continuously/automatically whenever a commit is made to my GitHub repository.</small></strong>
 </p> 
 
 
 ### Step 5: Configuring Docker
 
-In my third and final instance, the task was to set up Docker so that Jenkins on my first instance could connect to the Docker server to implement continuous deployment for my simple HTML resume website when I commit changes to GitHub. To test that things were working, I ran remote executable commands from Jenkins. I did ‘touch test.txt’ from Jenkins to make sure when I built and updated my pipeline, the test.txt file would appear inside my Docker instance, which it did. Then, I created a Dockerfile on GitHub and ran commands to ensure that when I committed changes to GitHub, they were reflected on the Docker instance. As shown below, my resume website has been deployed and set up for continuous integration, analysis (with SonarQube), and deployment with Docker.
+In my third and final instance, the task was to set up Docker so that Jenkins on my first instance could connect to the Docker server to implement continuous deployment for my simple HTML resume website when I commit changes to GitHub. To test that things were working, I ran
+
+ remote executable commands from Jenkins. I did ‘touch test.txt’ from Jenkins to make sure when I built and updated my pipeline, the test.txt file would appear inside my Docker instance, which it did. Then, I created a Dockerfile on GitHub and ran commands to ensure that when I committed changes to GitHub, they were reflected on the Docker instance. As shown below, my resume website has been deployed and set up for continuous integration, analysis (with SonarQube), and deployment with Docker.
 
 <p align="center">
   <img src="Images/jen26.png" alt="error" width="80%" height="80%">
   <br>
-  <strong><small>Project Image: Installing & setting up docker on my instance</small></strong>
+  <strong><small>Project Image: Installing & setting up Docker on my instance.</small></strong>
 </p> 
 
 <p align="center">
   <img src="Images/jen28.png" alt="error" width="80%" height="80%">
   <br>
-  <strong><small>Project Image: Configuring docker jenkins implementation, exposing it to port 22</small></strong>
+  <strong><small>Project Image: Configuring Docker Jenkins implementation, exposing it to port 22.</small></strong>
 </p> 
 
 <p align="center">
   <img src="Images/jen29.png" alt="error" width="80%" height="80%">
   <br>
-  <strong><small>Project Image: Configuring my docker server implementation on jenkins </small></strong>
+  <strong><small>Project Image: Configuring my Docker server implementation on Jenkins.</small></strong>
 </p> 
 
 <p align="center">
   <img src="Images/jen30.png" alt="error" width="80%" height="80%">
   <br>
-  <strong><small>Project Image: Now that docker is setup into my jenkins pipeline, im going to test for continious deployment by running a simple shell command to create a file in my docker instance </small></strong>
+  <strong><small>Project Image: Now that Docker is set up into my Jenkins pipeline, I’m going to test for continuous deployment by running a simple shell command to create a file in my Docker instance.</small></strong>
 </p> 
 
 <p align="center">
   <img src="Images/jen31.png" alt="error" width="80%" height="80%">
   <br>
-  <strong><small>Project Image: Success, the test file was created into my docker file from the jenkins pipeline via a remote shell command</small></strong>
+  <strong><small>Project Image: Success, the test file was created in my Docker instance from the Jenkins pipeline via a remote shell command.</small></strong>
 </p> 
 
 <p align="center">
   <img src="Images/jen32.png" alt="error" width="80%" height="80%">
   <br>
-  <strong><small>Project Image: Now im going to test for contiously deployment with the orignal application itself which is my html resume</small></strong>
+  <strong><small>Project Image: Now I’m going to test for continuous deployment with the original application itself, which is my HTML resume.</small></strong>
 </p> 
 
 <p align="center">
@@ -192,7 +194,7 @@ In my third and final instance, the task was to set up Docker so that Jenkins on
   <img src="Images/jen35.png" alt="error" width="80%" height="80%">
   <img src="Images/jen36.png" alt="error" width="80%" height="80%">
   <br>
-  <strong><small>Project Image: With the help of nginx and scp commands remotetly from the jenkins pipeline I was able to contiously/automatically deploy my website application within my pipeline with docker</small></strong>
+  <strong><small>Project Image: With the help of Nginx and SCP commands remotely from the Jenkins pipeline, I was able to continuously/automatically deploy my website application within my pipeline with Docker.</small></strong>
 </p> 
 
 <p align="center">
@@ -208,7 +210,7 @@ In my third and final instance, the task was to set up Docker so that Jenkins on
 <p align="center">
   <img src="Images/jen24.png" alt="error" width="80%" height="80%">
   <br>
-  <strong><small>Project Image: Upgrading my instances from t2.micro to t2.medium for more memeory and computing power</small></strong>
+  <strong><small>Project Image: Upgrading my instances from t2.micro to t2.medium for more memory and computing power.</small></strong>
 </p> 
 
 - **SonarQube Integration**: The Java community JDK used was outdated. Console logs from Jenkins helped identify this issue, which was resolved by creating a new Java 17 JDK run path file.
@@ -217,15 +219,15 @@ In my third and final instance, the task was to set up Docker so that Jenkins on
   <img src="Images/jen22.png" alt="error" width="80%" height="80%">
   <img src="Images/jen23.png" alt="error" width="80%" height="80%">
   <br>
-  <strong><small>Project Image: Implementing the new java 17 sdk path for jenkins, since the older updated path was giving me errors.</small></strong>
+  <strong><small>Project Image: Implementing the new Java 17 JDK path for Jenkins, since the older outdated path was giving me errors.</small></strong>
 </p> 
   
 - **Lost Jenkins Password**: Lost the Jenkins user password stored in a text file. Resolved by editing the XML file in the Jenkins instance, setting `<security>false</security>`, accessing the dashboard without login credentials, and resetting the password. Improved future password management practices to avoid such issues.
 
-- - **Amazon web services direct shell connect issue**: I ran into an issue when trying to connect jenkins to my docker service via the aws browser shell. I believe the issue had to do with authentication, which I decicded to manually login to my shell via my local command line using the .pem key provided when I was setting up my instances.
+- - **Amazon web services direct shell connect issue**: I ran into an issue when trying to connect Jenkins to my Docker service via the AWS browser shell. I believe the issue had to do with authentication, so I decided to manually log in to my shell via my local command line using the .pem key provided when I was setting up my instances.
  
 <p align="center">
   <img src="Images/jen27.png" alt="error" width="80%" height="80%">
   <br>
-  <strong><small>Project Image: Upgrading my instances from t2.micro to t2.medium for more memeory and computing power</small></strong>
+  <strong><small>Project Image: Manually logging in to my shell via my local command line using the .pem key due to AWS browser shell authentication issues.</small></strong>
 </p> 
