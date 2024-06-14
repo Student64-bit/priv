@@ -32,24 +32,27 @@ Next, I shelled into my Jenkins instance and installed a Java JRE. This allowed 
 <p align="center">
   <img src="Images/jen2.png" alt="error" width="80%" height="80%">
   <br>
-  <strong><small>Project Image: Exposing port 8080 so that I can use the Jenkins dashboard when it’s set up in my EC2 instance.</small></strong>
+<small>Project Image: Exposing port 8080 so that I can use the Jenkins dashboard when it’s set up in my EC2 instance.</small>
 </p>
+<br>
 <br>
 <br>
 
 <p align="center">
   <img src="Images/jen3.png" alt="error" width="80%" height="80%">
   <br>
-  <strong><small>Project Image: Jenkins is up and running on the instance. Although I will clean up after this project and the IP address will no longer be in use, it's generally a good practice to avoid exposing or displaying IP addresses. This caution helps protect against potential bad actors, even if the instance is virtual.</small></strong>
+<small>Project Image: Jenkins is up and running on the instance. Although I will clean up after this project and the IP address will no longer be in use, it's generally a good practice to avoid exposing or displaying IP addresses. This caution helps protect against potential bad actors, even if the instance is virtual.</small>
 </p> 
+<br>
 <br>
 <br>
 
 <p align="center">
   <img src="Images/jen4.png" alt="error" width="80%" height="80%">
   <br>
-  <strong><small>Project Image: Installing default plugins via the Jenkins dashboard.</small></strong>
+ <small>Project Image: Installing default plugins via the Jenkins dashboard.</small>
 </p> 
+<br>
 <br>
 <br>
 
