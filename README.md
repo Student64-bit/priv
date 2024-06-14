@@ -17,6 +17,12 @@ This project demonstrates creating a Continuous Integration and Continuous Deplo
 
 For this step, I started by creating a basic HTML webpage to be displayed. Then, I set up three separate EC2 instances: one for Jenkins to handle continuous integration, another for SonarQube to check and analyze the code, and the last one for Docker deployment.
 
+<p align="center">
+  <img src="https://i.imgur.com/WnnBdnl.png" alt="Architecture Diagram" width="80%" height="80%">
+  <br>
+  <strong><small>Figure 1: Simple Architecture Diagram.</small></strong>
+</p>
+
 ### Step 2: Setting Up Jenkins
 
 Next, I shelled into my Jenkins instance and installed a Java JRE. This allowed me to install Jenkins on the instance. After installing Jenkins, I went into my EC2 instance's security group and opened port 8080 so that I could configure Jenkins settings via the internet using my instance's IP. I then used the `systemctl status jenkins` command to get my secret key, which I needed to set up Jenkins properly. Inside the Jenkins configuration, I provided my GitHub link along with the correct branch and selected ‘GitHub hook trigger for GITScm polling’ to enable continuous integration whenever changes are made to GitHub.
