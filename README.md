@@ -20,8 +20,10 @@ For this step, I started by creating a basic HTML webpage to be displayed. Then,
 <p align="center">
   <img src="Images/jen1.png" alt="error" width="80%" height="80%">
   <br>
-  <strong><small>Project Image: The three EC2 instances that will be used in my CI/CD pipeline.</small></strong>
+  <small>Project Image: The three EC2 instances that will be used in my CI/CD pipeline.</small>
 </p> 
+<br>
+<br>
 
 ### Step 2: Setting Up Jenkins
 
@@ -31,19 +33,25 @@ Next, I shelled into my Jenkins instance and installed a Java JRE. This allowed 
   <img src="Images/jen2.png" alt="error" width="80%" height="80%">
   <br>
   <strong><small>Project Image: Exposing port 8080 so that I can use the Jenkins dashboard when it’s set up in my EC2 instance.</small></strong>
-</p> 
+</p>
+<br>
+<br>
 
 <p align="center">
   <img src="Images/jen3.png" alt="error" width="80%" height="80%">
   <br>
   <strong><small>Project Image: Jenkins is up and running on the instance. Although I will clean up after this project and the IP address will no longer be in use, it's generally a good practice to avoid exposing or displaying IP addresses. This caution helps protect against potential bad actors, even if the instance is virtual.</small></strong>
 </p> 
+<br>
+<br>
 
 <p align="center">
   <img src="Images/jen4.png" alt="error" width="80%" height="80%">
   <br>
   <strong><small>Project Image: Installing default plugins via the Jenkins dashboard.</small></strong>
 </p> 
+<br>
+<br>
 
 ### Step 3: Testing the Jenkins Pipeline
 
