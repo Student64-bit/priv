@@ -24,6 +24,7 @@ For this step, I started by creating a basic HTML webpage to be displayed. Then,
 </p> 
 <br>
 <br>
+<br>
 
 ### Step 2: Setting Up Jenkins
 
@@ -63,20 +64,31 @@ To test the Jenkins pipeline I previously created, I set up a webhook for my Git
 <p align="center">
   <img src="Images/jen5.png" alt="error" width="80%" height="80%">
   <br>
-  <strong><small>Project Image: Setting up my webhook to invoke Jenkins whenever code is committed to my GitHub repository.</small></strong>
+<small>Project Image: Setting up my webhook to invoke Jenkins whenever code is committed to my GitHub repository.</small>
 </p> 
+<br>
+<br>
+<br>
 
 <p align="center">
   <img src="Images/jen7.png" alt="error" width="80%" height="80%">
   <br>
-  <strong><small>Project Image: Initial Jenkins build, so that I can test continuous integration.</small></strong>
-</p> 
+<small>Project Image: Initial Jenkins build, so that I can test continuous integration.</small>
+</p>
+<br>
+<br>
+<br>
+
 
 <p align="center">
   <img src="Images/jen9.png" alt="error" width="80%" height="80%">
   <br>
-  <strong><small>Project Image: Console output</small></strong>
+<small>Project Image: Console output</small>
 </p> 
+<br>
+<br>
+<br>
+
 
 <p align="center">
   <img src="Images/jen8.png" alt="error" width="80%" height="80%">
