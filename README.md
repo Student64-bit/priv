@@ -163,13 +163,13 @@ In my third and final instance, the task was to set up Docker so that Jenkins on
 </p> 
 
 <p align="center">
-  <img src="Images/jen28.png" alt="error" width="80%" height="80%">
+  <img src="Images/jen29.png" alt="error" width="80%" height="80%">
   <br>
   <strong><small>Project Image: Configuring my docker server implementation on jenkins </small></strong>
 </p> 
 
 <p align="center">
-  <img src="Images/jen28.png" alt="error" width="80%" height="80%">
+  <img src="Images/jen30.png" alt="error" width="80%" height="80%">
   <br>
   <strong><small>Project Image: Now that docker is setup into my jenkins pipeline, im going to test for continious deployment by running a simple shell command to create a file in my docker instance </small></strong>
 </p> 
@@ -206,7 +206,7 @@ In my third and final instance, the task was to set up Docker so that Jenkins on
 - **Jenkins Performance**: The Jenkins dashboard was incredibly slow, so I upgraded the AWS EC2 instance to a larger size with higher compute power.
 
 <p align="center">
-  <img src="Images/jen26.png" alt="error" width="80%" height="80%">
+  <img src="Images/jen24.png" alt="error" width="80%" height="80%">
   <br>
   <strong><small>Project Image: Upgrading my instances from t2.micro to t2.medium for more memeory and computing power</small></strong>
 </p> 
