@@ -20,7 +20,7 @@ For this step, I started by creating a basic HTML webpage to be displayed. Then,
 ![alt text](images/jen1.png)
 
 <p align="center">
-  <img src="images/jen1.png" alt="error" width="80%" height="80%">
+  <img src="Images/jen1.png" alt="error" width="80%" height="80%">
   <br>
   <strong><small>Figure 1: Simple Architecture Diagram.</small></strong>
 </p> 
