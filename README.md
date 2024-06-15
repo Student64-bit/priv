@@ -203,4 +203,114 @@ For this step, I configured and set up SonarQube on my second EC2 instance for c
 
 ### Step 5: Configuring Docker
 
-In my third and final instance, the task was to set up Docker so that Jenkins on my first instance could connect to the Docker server to implement continuous deployment for my simple HTML resume website when I commit
+In my third and final instance, the task was to set up Docker so that Jenkins on my first instance could connect to the Docker server to implement continuous deployment for my simple HTML resume website when I commit changes to GitHub. To test that things were working, I ran remote executable commands from Jenkins. I did ‘touch test.txt’ from Jenkins to make sure when I built and updated my pipeline, the test.txt file would appear inside my Docker instance, which it did. Then, I created a Dockerfile on GitHub and ran commands to ensure that when I committed changes to GitHub, they were reflected on the Docker instance. As shown below, my resume website has been deployed and set up for continuous integration, analysis (with SonarQube), and deployment with Docker.
+
+<p align="center">
+  <img src="Images/jen26.png" alt="error" width="80%" height="80%">
+  <br>
+<small>Project Image: Installing & setting up docker on my instance</small>
+</p> 
+<br>
+<br>
+<br>
+
+<p align="center">
+  <img src="Images/jen28.png" alt="error" width="80%" height="80%">
+  <br>
+<small>Project Image: Configuring docker jenkins implementation, exposing it to port 22</small>
+</p> 
+<br>
+<br>
+<br>
+
+<p align="center">
+  <img src="Images/jen29.png" alt="error" width="80%" height="80%">
+  <br>
+<small>Project Image: Configuring my docker server implementation on jenkins </small>
+</p> 
+<br>
+<br>
+<br>
+
+<p align="center">
+  <img src="Images/jen30.png" alt="error" width="80%" height="80%">
+  <br>
+<small>Project Image: Now that docker is setup into my jenkins pipeline, im going to test for continious deployment by running a simple shell command to create a file in my docker instance </small>
+</p> 
+<br>
+<br>
+<br>
+
+<p align="center">
+  <img src="Images/jen31.png" alt="error" width="80%" height="80%">
+  <br>
+<small>Project Image: Success, the test file was created into my docker file from the jenkins pipeline via a remote shell command</small>
+</p> 
+<br>
+<br>
+<br>
+
+<p align="center">
+  <img src="Images/jen32.png" alt="error" width="80%" height="80%">
+  <br>
+<small>Project Image: Now im going to test for contiously deployment with the orignal application itself which is my html resume</small>
+</p> 
+<br>
+<br>
+<br>
+
+<p align="center">
+  <img src="Images/jen33.png" alt="error" width="80%" height="80%">
+  <img src="Images/jen34.png" alt="error" width="80%" height="80%">
+  <img src="Images/jen35.png" alt="error" width="80%" height="80%">
+  <img src="Images/jen36.png" alt="error" width="80%" height="80%">
+  <br>
+<small>Project Image: With the help of nginx and scp commands remotetly from the jenkins pipeline I was able to contiously/automatically deploy my website application within my pipeline with docker</small>
+</p> 
+<br>
+<br>
+<br>
+
+<p align="center">
+  <img src="Images/jen37.png" alt="error" width="80%" height="80%">
+  <br>
+<small>Project Image: My application has now been deployed in my CI/CD pipeline.</small>
+</p> 
+<br>
+<br>
+<br>
+
+## Issues Encountered
+
+- **Jenkins Performance**: The Jenkins dashboard was incredibly slow, so I upgraded the AWS EC2 instance to a larger size with higher compute power.
+
+<p align="center">
+  <img src="Images/jen24.png" alt="error" width="80%" height="80%">
+  <br>
+<small>Project Image: Upgrading my instances from t2.micro to t2.medium for more memeory and computing power</small>
+</p> 
+<br>
+<br>
+<br>
+
+- **SonarQube Integration**: The Java community JDK used was outdated. Console logs from Jenkins helped identify this issue, which was resolved by creating a new Java 17 JDK run path file.
+
+<p align="center">
+  <img src="Images/jen22.png" alt="error" width="80%" height="80%">
+  <img src="Images/jen23.png" alt="error" width="80%" height="80%">
+  <br>
+<small>Project Image: Implementing the new java 17 sdk path for jenkins, since the older updated path was giving me errors.</small>
+</p> 
+<br>
+<br>
+<br>
+  
+- **Lost Jenkins Password**: Lost the Jenkins user password stored in a text file. Resolved by editing the XML file in the Jenkins instance, setting `<security>false</security>`, accessing the dashboard without login credentials, and resetting the password. Improved future password management practices to avoid such issues.
+
+- - **Amazon web services direct shell connect issue**: I ran into an issue when trying to connect jenkins to my docker service via the aws browser shell. I believe the issue had to do with authentication, which I decicded to manually login to my shell via my local command line using the .pem key provided when I was setting up my instances.
+ 
+<p align="center">
+  <img src="Images/jen27.png" alt="error" width="80%" height="80%">
+  <br>
+  <strong><small>Project Image: Upgrading my instances from t2.micro to t2.medium for more memeory and computing power</small></strong>
+</p> 
