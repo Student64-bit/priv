@@ -23,8 +23,6 @@ For this step, I started by creating a basic HTML webpage to be displayed. Then,
   <small>Project Image: The three EC2 instances that will be used in my CI/CD pipeline.</small>
 </p> 
 <br>
-<br>
-<br>
 
 ### Step 2: Setting Up Jenkins
 
@@ -54,8 +52,7 @@ Next, I shelled into my Jenkins instance and installed a Java JRE. This allowed 
   <small>Project Image: Installing default plugins via the Jenkins dashboard.</small>
 </p> 
 <br>
-<br>
-<br>
+
 
 ### Step 3: Testing the Jenkins Pipeline
 
@@ -121,8 +118,7 @@ To test the Jenkins pipeline I previously created, I set up a webhook for my Git
   <small>Project Image: Success, Jenkins integrated the commit from Jenkins into the pipeline which is proof of continuous integration.</small>
 </p> 
 <br>
-<br>
-<br>
+
 
 ### Step 4: Setting Up SonarQube
 
@@ -197,8 +193,6 @@ For this step, I configured and set up SonarQube on my second EC2 instance for c
   <br>
   <small>Project Image: Finally, after configuring SonarQube to work with Jenkins, I rebuilt my pipeline and SonarQube is successfully scanning and checking for code errors continuously/automatically whenever a commit is made to my GitHub repository.</small>
 </p> 
-<br>
-<br>
 <br>
 
 ### Step 5: Configuring Docker
@@ -276,8 +270,6 @@ In my third and final instance, the task was to set up Docker so that Jenkins on
   <br>
 <small>Project Image: My application has now been deployed in my CI/CD pipeline.</small>
 </p> 
-<br>
-<br>
 <br>
 
 ## Issues Encountered
